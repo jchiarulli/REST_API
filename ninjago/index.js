@@ -5,7 +5,9 @@ const mongoose = require("mongoose");
 // set up express app
 const app = express();
 
-mongoose.connect();
+mongoose.connect(
+  "mongodb+srv://Jason:test123@cluster0.zi4or.mongodb.net/NinjaGo?retryWrites=true&w=majority"
+);
 
 mongoose.connection.once("open", () => {
   console.log("connected to database");
